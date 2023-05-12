@@ -1,3 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+:root {
+  --clr-primary: #1c1c1c;
+  --clr-primary-60: rgba(0, 0, 0, 0.6);
+  --clr-secondary: #f2f2f2;
+  --ff-primary: 'Inter', sans-serif;
+  --ff-secondary: 'Ephesis', cursive;
+  --header-height: 50px;
+  --transition-2: 150ms ease;
+  --transition-2: 250ms ease;
+  --transition-3: all 250ms cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--ff-primary);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--clr-secondary);
+}
+
 img {
   display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*
+ * Header
+ */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background: var(--clr-primary-60);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 1em;
+  box-shadow: rgba(0, 0, 0, 0.5) 8px 0px 24px;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.brand span {
+  color: #dd640e;
+}
+
+/*
+ * Top level Navigation
+ */
+
+.nav {
+  width: 12em;
+  height: 100vh;
+  visibility: hidden;
+  position: absolute;
+  top: var(--header-height);
+  right: -100%;
+  text-align: end;
+  background: var(--clr-primary-60);
+  transition: var(--transition-2);
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+}
+
+.nav.active {
+  right: 0;
+  visibility: visible;
+}
+
+.nav__item a {
+  width: 100%;
+  padding: 0.5em 2em;
+  transition: var(--transition-1);
+}
+
+.nav__item a:hover {
+  background: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
+.menu__icon {
+  cursor: pointer;
+  padding: 0.8em 0.5em;
+}
+
+.menu__icon .line {
+  position: relative;
+  display: block;
+  background: var(--clr-secondary);
+  border-radius: 4px;
+  width: 20px;
+  height: 3px;
+}
+
+.menu__icon .line::before,
+.menu__icon .line::after {
+  position: absolute;
+  display: block;
+  content: '';
+  background: var(--clr-secondary);
+  border-radius: 2px;
+  width: 100%;
+  height: 3px;
+  transition: var(--transition-3);
+}
+
+.menu__icon .line::before {
+  top: -8px;
+}
+
+.menu__icon .line::after {
+  bottom: -8px;
+}
+
+.nav.active ~ .menu__icon .line {
+  background: transparent;
+}
+
+.nav.active ~ .menu__icon .line::before {
+  top: 0;
+  rotate: 45deg;
+}
+
+.nav.active ~ .menu__icon .line::after {
+  bottom: 0;
+  rotate: -45deg;
+}
+
+/*
+ * Hero
+ */
+
+.hero {
+  background: url('../public/images/heros/hero-image_2.jpg') no-repeat fixed center / cover;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 1em;
+}
+
+.hero::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: var(--clr-primary-60);
+}
+
+.hero__headline {
+  min-width: 260px;
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+  padding: 1em;
+}
+
+.hero__headline h1 {
+  font-family: var(--ff-secondary);
+  font-size: 2.4rem;
+  font-weight: 400;
+  word-spacing: 0.4rem;
+  user-select: none;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 8px 24px;
+}
+
+/*
+ * Main
+ */
+
+.main {
+  height: 200vh;
 }

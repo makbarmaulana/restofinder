@@ -1,0 +1,60 @@
+/* Phone */
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 16px;
+  }
+
+  .header {
+    padding: 1em 2em;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 1em 3em;
+  }
+
+  .nav {
+    visibility: visible;
+    width: auto;
+    height: auto;
+    position: static;
+    top: unset;
+    right: unset;
+    text-align: center;
+    background: unset;
+    box-shadow: unset;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 3em;
+  }
+
+  .nav__item a {
+    width: auto;
+    padding: unset;
+  }
+
+  .nav__item a:hover {
+    background: unset;
+    color: #757575;
+  }
+
+  .menu__icon {
+    display: none;
+  }
+
+  .hero__headline h1 {
+    font-size: 2.7rem;
+  }
+}
+
+/* Laptop */
+@media screen and (min-width: 1024px) {
+}
+
+/* Large Screen */
+@media screen and (min-width: 1280px) {
+}
