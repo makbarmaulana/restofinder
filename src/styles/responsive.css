@@ -39,7 +39,7 @@
 
   .nav__item a:hover {
     background: unset;
-    color: #757575;
+    color: var(--clr-grey-1);
   }
 
   .menu__icon {
@@ -49,10 +49,25 @@
   .hero__headline h1 {
     font-size: 2.7rem;
   }
+
+  .main {
+    padding: 3em 2em;
+  }
+
+  .content__thumbnail {
+    height: 300px;
+  }
 }
 
 /* Laptop */
 @media screen and (min-width: 1024px) {
+  .hero__headline h1 {
+    font-size: 3rem;
+  }
+
+  .main {
+    padding: 3em;
+  }
 }
 
 /* Large Screen */
