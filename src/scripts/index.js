@@ -28,7 +28,7 @@ import('../DATA.json').then(({ default: data }) => {
         <p class="content__detail_rating">Rating: ${restaurant.rating} / 5</p>
         <h3 class="content__detail_name">${restaurant.name}</h3>
         <p class="content__detail_description">${restaurant.description}</p>
-        <p class="content__detail_city">${restaurant.city}</p>
+        <p class="content__detail_city">Kota ${restaurant.city}</p>
       </div>
     </article>
     `;

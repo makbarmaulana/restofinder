@@ -47,7 +47,7 @@ a {
 
 /*
  * Header
- */
+*/
 
 .header {
   position: fixed;
@@ -77,7 +77,7 @@ a {
 
 /*
  * Top level Navigation
- */
+*/
 
 .nav {
   width: 12em;
@@ -161,7 +161,7 @@ a {
 
 /*
  * Hero
- */
+*/
 
 .hero {
   background: url('../public/images/heros/hero-image_2.jpg') no-repeat fixed center / cover;
@@ -202,7 +202,7 @@ a {
 
 /*
  * Main
- */
+*/
 
 .main {
   padding: 2em 1.5em;
@@ -277,4 +277,24 @@ a {
 .content__detail_city {
   font-weight: 500;
   color: var(--clr-grey-2);
+}
+
+/*
+ * Footer
+*/
+
+.footer {
+  padding: 1.5em;
+  text-align: center;
+  background: var(--clr-secondary);
+}
+
+.author {
+  font-weight: 500;
+}
+
+.author:hover {
+  color: #dd640e;
+  text-decoration: underline;
+  transition: var(--transition-1);
 }
