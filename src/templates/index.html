@@ -4,18 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant Apps</title>
+    <title>RestoRadar</title>
   </head>
   <body>
-    <h1>Restaurant Apps</h1>
-    <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-    <p>
-      Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros sebagai
-      background hero elemen
-    </p>
-    <img src="./images/heros/hero-image_1.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_3.jpg" width="450" alt="" />
-    <img src="./images/heros/hero-image_4.jpg" width="450" alt="" />
+    <a tabindex="0" href="#maincontent" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <div class="header__inner">
+        <h1 class="brand"><span>Resto</span>Radar</h1>
+      </div>
+
+      <nav id="drawer" class="nav">
+        <button type="button" id="menu" class="menu" aria-label="toggle menu navigation">
+          <span class="line"></span>
+        </button>
+
+        <ul class="nav__list">
+          <li class="nav__item"><a href="/">Home</a></li>
+          <li class="nav__item"><a href="#">Favorite</a></li>
+          <li class="nav__item">
+            <a href="https://github.com/makbarmaulana" target="_blank">About Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero__headline">
+        <h2 tabindex="0">Discover Restaurants in your City</h2>
+      </div>
+    </div>
+
+    <main id="maincontent" class="main">
+      <div class="main__header">
+        <h2 tabindex="0">Explore Restaurants</h2>
+      </div>
+
+      <section class="contents"></section>
+    </main>
+
+    <footer class="footer">
+      Copyright &copy; 2023
+      <a href="https://github.com/makbarmaulana" class="author">M Akbar Maulana</a>
+      - RestoRadar
+    </footer>
   </body>
 </html>
