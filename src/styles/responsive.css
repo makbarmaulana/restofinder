@@ -1,4 +1,13 @@
-/* Phone */
+/*
+ * Phone
+*/
+
+@media screen and (min-width: 360px) {
+  .content__item {
+    max-width: 20em;
+  }
+}
+
 @media screen and (min-width: 480px) {
   html {
     font-size: 16px;
@@ -9,13 +18,20 @@
   }
 }
 
-/* Tablet */
+/*
+ * Tablet
+*/
+
 @media screen and (min-width: 768px) {
   .header {
     padding: 1em 3em;
   }
 
-  .nav {
+  .menu {
+    display: none;
+  }
+
+  .nav__list {
     visibility: visible;
     width: auto;
     height: auto;
@@ -23,11 +39,8 @@
     top: unset;
     right: unset;
     text-align: center;
-    background: unset;
+    background: transparent;
     box-shadow: unset;
-  }
-
-  .nav__list {
     display: flex;
     gap: 3em;
   }
@@ -35,18 +48,15 @@
   .nav__item a {
     width: auto;
     padding: unset;
+    border: unset;
   }
 
   .nav__item a:hover {
-    background: unset;
-    color: var(--clr-grey-1);
+    background: transparent;
+    color: var(--clr-accent);
   }
 
-  .menu__icon {
-    display: none;
-  }
-
-  .hero__headline h1 {
+  .hero__headline h2 {
     font-size: 2.7rem;
   }
 
@@ -54,14 +64,21 @@
     padding: 3em 2em;
   }
 
+  .content__item {
+    max-width: unset;
+  }
+
   .content__thumbnail {
-    height: 300px;
+    height: 250px;
   }
 }
 
-/* Laptop */
+/*
+ * Laptop
+*/
+
 @media screen and (min-width: 1024px) {
-  .hero__headline h1 {
+  .hero__headline h2 {
     font-size: 3rem;
   }
 

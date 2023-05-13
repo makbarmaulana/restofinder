@@ -7,33 +7,37 @@
     <title>RestoRadar</title>
   </head>
   <body>
+    <a tabindex="0" href="#maincontent" class="skip-link">Skip to content</a>
+
     <header class="header">
       <div class="header__inner">
-        <a href="/" class="brand"><span>Resto</span>Radar</a>
+        <h1 class="brand"><span>Resto</span>Radar</h1>
       </div>
 
-      <nav class="nav">
+      <nav id="drawer" class="nav">
+        <button type="button" id="menu" class="menu" aria-label="toggle menu navigation">
+          <span class="line"></span>
+        </button>
+
         <ul class="nav__list">
           <li class="nav__item"><a href="/">Home</a></li>
           <li class="nav__item"><a href="#">Favorite</a></li>
-          <li class="nav__item"><a href="https://github.com/makbarmaulana">About Us</a></li>
+          <li class="nav__item">
+            <a href="https://github.com/makbarmaulana" target="_blank">About Us</a>
+          </li>
         </ul>
       </nav>
-
-      <div id="drawer" class="menu__icon">
-        <span class="line"></span>
-      </div>
     </header>
 
     <div class="hero">
       <div class="hero__headline">
-        <h1>Discover Restaurants in your City</h1>
+        <h2 tabindex="0">Discover Restaurants in your City</h2>
       </div>
     </div>
 
-    <main class="main">
+    <main id="maincontent" class="main">
       <div class="main__header">
-        <h1>Explore Restaurants</h1>
+        <h2 tabindex="0">Explore Restaurants</h2>
       </div>
 
       <section class="contents"></section>
@@ -42,7 +46,7 @@
     <footer class="footer">
       Copyright &copy; 2023
       <a href="https://github.com/makbarmaulana" class="author">M Akbar Maulana</a>
-      - RestoFinder
+      - RestoRadar
     </footer>
   </body>
 </html>
